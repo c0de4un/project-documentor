@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  app:
+    ports:
+      - "80:80"
+    build: ./app
+    volumes:
+      - ./app/html:/var/www/html
+  db:
+    image: mysql
+    volumes:
+      - ./db/data:/var/lib/mysql
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=on
+  phpmyadmin:
+    image: phpmyadmin
+    ports:
+      - 85:80
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=db
