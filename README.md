@@ -25,6 +25,7 @@ Build and start Docker image
 ```sh
     $php composer.phar install
 ```
+3. Create DB for app from `localhost:85` (Docker image must be up & running), using name from ``
 
 ### Frontend
 1. Install Node.js on your host-machine
