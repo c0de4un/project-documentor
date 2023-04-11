@@ -1,12 +1,12 @@
 version: '3.8'
 
 services:
-  app:
+  www:
     ports:
-      - "80:80"
-    build: ./app
+      - "8080:8080"
+    build: ./www
     volumes:
-      - ./app/html:/var/www/html
+      - ./www/html:/var/www/html/
   db:
     image: mysql
     volumes:
@@ -16,7 +16,7 @@ services:
   phpmyadmin:
     image: phpmyadmin
     ports:
-      - 85:80
+      - 3306:80
     environment:
       - PMA_ARBITRARY=1
       - PMA_HOST=db

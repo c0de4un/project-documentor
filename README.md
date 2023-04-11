@@ -20,7 +20,7 @@ Build and start Docker image
 ```
 
 ### Backend
-1. Download `composer.phar` from `https://getcomposer.org/download/` to `/app/html`
+1. Download `composer.phar` from `https://getcomposer.org/download/` to `/www/html`
 2. Install PHP packages
 ```sh
     $php composer.phar install
@@ -29,4 +29,4 @@ Build and start Docker image
 
 ### Frontend
 1. Install Node.js on your host-machine
-2. Build artefacts to `/app/html/public`, using your host-machine npm
+2. Build artefacts to `/www/html/public`, using your host-machine npm
